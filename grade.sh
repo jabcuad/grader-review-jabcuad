@@ -14,8 +14,8 @@ if [[ -f ListExamples.java ]]
 then
 echo "correct file"
 else
-echo"wrong file"
-exit 1
+echo "wrong file"
+exit 
 fi
 
 cd ..
@@ -28,6 +28,9 @@ java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUn
 if [[ -s error.txt ]] 
 then 
 echo "There's an error"
+cat error.txt
+else
+echo "correct"
 fi
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
